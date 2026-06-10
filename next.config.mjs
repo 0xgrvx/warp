@@ -1,6 +1,6 @@
 /** @type {import('next').NextConfig} */
 const nextConfig = {
-  basePath: '/warp',
+  basePath: process.env.NODE_ENV === 'production' ? '/warp' : '',
   output: 'export',
   images: { unoptimized: true },
 };
